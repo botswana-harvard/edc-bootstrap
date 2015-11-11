@@ -12,9 +12,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="{% static "css/dashboard.css" %}" rel="stylesheet">
-    <link href="{%static "css/receive.css" %}" rel="stylesheet">
+
+{% block extra_css%}{% endblock extra_css%}
 
 {% block scripts %}
     <!-- Bootstrap core JavaScript
@@ -37,7 +36,7 @@
     <!-- Resources for "x-editable columns" -->
     <link href="{% static "css/bootstrap-editable.css" %}" rel="stylesheet" charset="utf8" />
     <script src="{% static "js/bootstrap-editable.min.js" %}" type="text/javascript" charset="utf8" ></script>
-    <script src="{% static "js/edc-editable.js" %}" type="text/javascript" charset="utf8" ></script>
+    <script src="{% static "edc-bootstrap/js/edc-editable.js" %}" type="text/javascript" charset="utf8" ></script>
 {% endblock datatables%}
 </head>
 
