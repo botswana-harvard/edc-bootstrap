@@ -1,4 +1,4 @@
 # edc-bootstrap
 
-Bootstrap and DataTable classes
+Bootstrap, DataTable and xeditable views and templates for the Edc.
 
