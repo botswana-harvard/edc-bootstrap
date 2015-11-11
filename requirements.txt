@@ -1,0 +1,4 @@
+Django>=1.8.5
+django-datatable-view
+django-braces
+django-crispy

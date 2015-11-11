@@ -57,9 +57,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav  navbar-right">
-          {% block top_navbar %}
             <li><a title="home" href="/"><span class="glyphicon glyphicon-home"></span></a></li>
-            <li><a title="upload" href="{% url 'upload' %}"><span class="glyphicon glyphicon-upload"></span></a></li>
+	       	{% block top_navbar_extras %}
+	       	{% endblock top_navbar_extras %}
             <li><a title="settings" href="/admin/"><span class="glyphicon glyphicon-wrench"></span></a></li>
             <li><a title="user profile" href="/user_profile/">{{ user.username }}</a></li>
             {% if user.username %}
@@ -67,10 +67,8 @@
             {% else %}
             	<li><a alt="login" title="login" href="/login/"><span class="glyphicon glyphicon-log-in"></span></a></li>
             {% endif %}
-          {% endblock top_navbar %}
           </ul>
-          {% block search_box %}
-          {% endblock search_box %}
+          {% block search_box %}{% endblock search_box %}
           
         </div><!--/.nav-collapse -->
       </div>
