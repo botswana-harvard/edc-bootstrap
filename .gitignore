@@ -8,7 +8,7 @@ edc_rdb/migrations/*
 data/*
 test-*
 private_settings*
-db.sqlite3
+db.sqlite3*
 etc/*
 getresults_dst/testdata/
 getresults_dst/testdata/inbox/

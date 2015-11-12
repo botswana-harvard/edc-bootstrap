@@ -11,7 +11,7 @@ from .edc_context_mixin import EdcContextMixin
 
 class LoginView(FormInvalidMessageMixin, EdcContextMixin, FormView):
     """A create view for Foo model"""
-    template_name = "edc_bootstrap/login.html"
+    template_name = "login.html"
     form_class = LoginForm
     success_url = '/'
     form_invalid_message = 'Invalid username or password.'
