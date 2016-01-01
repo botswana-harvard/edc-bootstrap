@@ -1,7 +1,7 @@
 {% extends "listview.html" %}
 		
 {% block listview %}
-    <h1>{{ listview_title|default:"listview_title" }}</h1>
+    <h1>{{ listview_title|capfirst|default:"listview_title" }}</h1>
 	<div class="table-responsive">
 	    {{ datatable }}
 	</div>

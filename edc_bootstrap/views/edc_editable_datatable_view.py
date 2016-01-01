@@ -8,12 +8,13 @@ from django.utils import timezone
 
 class EdcEditableDatatableView(XEditableDatatableView):
 
-    model = None
     modification_fields = ['user_modified', 'modified', 'hostname_modified']
     template_name = 'datatables_listview.html'
-    datatable_options = {
-        'structure_template': "edc_bootstrap/bootstrap_structure.html",
-    }
+
+    def get_context_data(self, **kwargs):
+        context = super(EdcEditableDatatableView, self).get_context_data(**kwargs)
+        context['listview_title'] = self.model._meta.verbose_name_plural
+        return context
 
     def update_object(self, form, obj):
         """ Saves the new value to the target object and adds in modification values. """
